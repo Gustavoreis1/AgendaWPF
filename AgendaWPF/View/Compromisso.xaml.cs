@@ -23,5 +23,10 @@ namespace AgendaWPF.View
         {
             InitializeComponent();
         }
+
+        private void ContatoAdicionarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

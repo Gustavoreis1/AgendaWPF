@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="Compromisso" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="247*"/>
+            <RowDefinition Height="172*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ContatoAdicionarButton" Content="Adicionar Contato" Margin="10,10,10,217"/>
+        <Button Content="Remover Contato" Margin="10,35,10,192"/>
+        <TextBox Height="23" Margin="10,10,10,0" Grid.Row="1" TextWrapping="Wrap" Text="Nome: " VerticalAlignment="Top"/>
+        <TextBox Height="23" Margin="10,38,10,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
