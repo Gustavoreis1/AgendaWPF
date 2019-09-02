@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendaWPF.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace AgendaWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ContatosButton_Click(object sender, RoutedEventArgs e)
+        {
+            Contato C = new Contato();
+            C.Show();
+
+        }
+
+        private void CompromissoButton_Click(object sender, RoutedEventArgs e)
+        {
+            Compromisso Cmp = new Compromisso();
+            Cmp.Show();
         }
     }
 }
