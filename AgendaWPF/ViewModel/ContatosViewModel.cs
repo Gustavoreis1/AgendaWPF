@@ -4,7 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AgendaWPF;
+using Agenda;
+using Agenda.Classes;
 
 namespace AgendaWPF.ViewModel
 {
@@ -22,14 +23,14 @@ namespace AgendaWPF.ViewModel
         }
 
         public Contato ContatoSelecionado { get; set; }
-        private AgendaContext context { get; set; }
+        private AgendaContext Context { get; set; }
         public ContatosViewModel()
         {
-            context = new AgendaContext();
+            Context = new AgendaContext();
             this.Contatos =
                 new ObservableCollection<Contato>(
-                context.Contatos.ToList());
-            this.ContatoSelecionado = context
+                Context.Contatos.ToList());
+            this.ContatoSelecionado = Context
                 .Contatos.FirstOrDefault();
         }
 
@@ -37,7 +38,7 @@ namespace AgendaWPF.ViewModel
         {
             if (this.ContatoSelecionado.Id != 0)
             {
-                this.context.Contatos.Remove(
+                this.Context.Contatos.Remove(
                     this.ContatoSelecionado);
             }
             this.Contatos.Remove(this.ContatoSelecionado);
@@ -45,14 +46,14 @@ namespace AgendaWPF.ViewModel
 
         public void Salvar()
         {
-            this.context.SaveChanges();
+            this.Context.SaveChanges();
         }
 
         public void Adicionar()
         {
-            Contatos c = new Contatos();
+            Contato c = new Contato();
             this.Contatos.Add(c);
-            this.context.Contatos.Add(c);
+            this.Context.Contatos.Add(c);
             this.ContatoSelecionado = c;
         }
     }

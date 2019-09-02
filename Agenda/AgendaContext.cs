@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Agenda
 {
-    class AgendaContext : DbContext
+    public class AgendaContext : DbContext
     {
         public AgendaContext() : base("name=AgendaContext")
         {
