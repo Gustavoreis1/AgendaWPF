@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaContext.cs" />
     <Compile Include="Classes\Compromisso.cs" />
     <Compile Include="Classes\Contato.cs" />
     <Compile Include="Program.cs" />

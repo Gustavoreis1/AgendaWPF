@@ -13,13 +13,17 @@ namespace Agenda.Classes
         public String Titulo { get; set; }
         [Required(ErrorMessage = "O campo Titulo é requerido!!")]
         [MaxLength(200, ErrorMessage = "O campo Titulo recebe no máximo 200 caracteres")]
-        [Display(Name = "Sobrenome")]
+        [Display(Name = "Titulo")]
+
         public String Local { get; set; }
-        [Required(ErrorMessage = "O campo Local é requerido!!")]
-        [MaxLength(100, ErrorMessage = "O campo Sobrenome recebe no máximo 100 caracteres")]
-        [Display(Name = "Sobrenome")]
+        [MaxLength(500, ErrorMessage = "O campo Local recebe no máximo 500 caracteres")]
+        [Display(Name = "Local")]
+
         public DateTime Inicio { get; set; }
+        [Required(ErrorMessage = "O campo Data de Inicio é requerido!!")]
+
         public DateTime Fim { get; set; }
+
         public IList<Contato> Participantes { get; set; }
     }
 }
