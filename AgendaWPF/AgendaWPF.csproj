@@ -120,5 +120,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agenda\Agenda.csproj">
+      <Project>{e051a498-89f2-471c-88a2-2253f5553278}</Project>
+      <Name>Agenda</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

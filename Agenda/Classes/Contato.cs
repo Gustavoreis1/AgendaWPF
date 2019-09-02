@@ -10,6 +10,8 @@ namespace Agenda.Classes
 {
     public class Contato
     {
+
+        public int Id { get; set; }
         public String Nome { get; set; }
         [Required(ErrorMessage = "O campo Nome é requerido!!")]
         [MaxLength(100, ErrorMessage = "O campo Nome recebe no máximo 100 caracteres")]
