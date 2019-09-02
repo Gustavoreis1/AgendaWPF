@@ -18,6 +18,7 @@ namespace Agenda
             contato.Nasc = new DateTime(2017, 07, 07);
             contato.Telefone = "6666-6666";
             context.Contatos.Add(contato);
+            context.SaveChanges();
         }
     }
 }
