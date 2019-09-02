@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaWPF", "AgendaWPF\AgendaWPF.csproj", "{B40D1596-D51B-4593-8A06-83097B79B74C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E051A498-89F2-471C-88A2-2253F5553278} = {E051A498-89F2-471C-88A2-2253F5553278}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda", "Agenda\Agenda.csproj", "{E051A498-89F2-471C-88A2-2253F5553278}"
 EndProject

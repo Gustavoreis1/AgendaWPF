@@ -61,6 +61,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\CompromissoViewModel.cs" />
+    <Compile Include="ViewModel\ContatosViewModel.cs" />
     <Compile Include="View\Compromisso.xaml.cs">
       <DependentUpon>Compromisso.xaml</DependentUpon>
     </Compile>
@@ -114,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

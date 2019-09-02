@@ -10,7 +10,7 @@ namespace Agenda
 {
     class AgendaContext : DbContext
     {
-        public AgendaContext() : base("DefaultConnection")
+        public AgendaContext() : base("name=AgendaContext")
         {
 
         }

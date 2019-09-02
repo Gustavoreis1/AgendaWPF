@@ -10,6 +10,5 @@
         <Button x:Name="ContatosButton" Content="Contatos" Margin="10,20,10,379" Click="ContatosButton_Click"/>
         <Button x:Name="CompromissoButton" Content="Compromissos" Margin="10,55,10,0" VerticalAlignment="Top" Click="CompromissoButton_Click"/>
         <Button x:Name="FinAplButton" Content="Finalizar Aplicação" Margin="10,91,10,0" VerticalAlignment="Top"/>
-
     </Grid>
 </Window>
