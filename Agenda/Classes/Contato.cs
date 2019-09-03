@@ -25,7 +25,6 @@ namespace Agenda.Classes
         [Display(Name = "Sobrenome")]
         public String Sobrenome { get; set; }
         
-
         public DateTime Nasc { get; set; }
 
         [Required(ErrorMessage = "O campo Telefone é requerido!!")]

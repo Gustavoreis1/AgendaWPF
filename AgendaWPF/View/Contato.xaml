@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:AgendaWPF.View"
         mc:Ignorable="d"
         Title="Contato" Height="600" Width="800">
@@ -22,8 +23,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="AdicionarContatoButton" Content="Adicionar Contato" Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" />
-        <Button x:Name="RemoverContatoButton" Content="Remover Contato" Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"/>
+        <Button x:Name="AdicionarContatoButton" Content="Adicionar Contato" Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" Click="AdicionarContatoButton_Click" />
+        <Button x:Name="RemoverContatoButton" Content="Remover Contato" Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"  Click="RemoverContatoButton_Click" IsEnabled="{Binding Path=ContatosViewModel.PodeRemover}"/>
         <TextBlock FontSize="15" Grid.Row="1" Grid.Column="0">Nome:</TextBlock>
         <TextBox x:Name="nomeText" FontSize="15" Grid.Row="1" Grid.Column="1" Text="{Binding Path=ContatosViewModel.ContatoSelecionado.Nome}"></TextBox>
         <TextBlock FontSize="15" Grid.Row="2" Grid.Column="0">Sobrenome:</TextBlock>
@@ -41,6 +42,7 @@
                   "{Binding Path=ContatosViewModel.Contatos}"
                   DisplayMemberPath="Nome"
                   SelectedItem="{Binding Path=ContatosViewModel.ContatoSelecionado}"/>
+        <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
 
     </Grid>
 </Window>
