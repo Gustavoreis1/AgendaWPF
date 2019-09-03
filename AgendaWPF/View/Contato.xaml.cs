@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,34 @@ namespace AgendaWPF.View
     /// </summary>
     public partial class Contato : Window
     {
+
+        public ViewModel.ContatosViewModel ContatosViewModel { get; set; }
         public Contato()
         {
             InitializeComponent();
+            this.ContatosViewModel = new ViewModel.ContatosViewModel();
+            this.DataContext = this;
+        }
+
+        private void AdicionarContatoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContatosViewModel.Adicionar();
+        }
+
+        private void RemoverContatoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContatosViewModel.Remover();
+        }
+
+        private void SalvarContatoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.ContatosViewModel.Salvar();
+            this.Close();
+        }
+
+        private void CancelarContatoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
