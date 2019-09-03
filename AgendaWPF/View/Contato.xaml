@@ -25,12 +25,12 @@
         <Button x:Name="AdicionarContatoButton" Content="Adicionar Contato" Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" />
         <Button x:Name="RemoverContatoButton" Content="Remover Contato" Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"/>
         <TextBlock FontSize="15" Grid.Row="1" Grid.Column="0">Nome:</TextBlock>
-        <TextBox x:Name="nomeText" FontSize="15" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox x:Name="nomeText" FontSize="15" Grid.Row="1" Grid.Column="1" Text="{Binding Path=ContatosViewModel.ContatoSelecionado.Nome}"></TextBox>
         <TextBlock FontSize="15" Grid.Row="2" Grid.Column="0">Sobrenome:</TextBlock>
-        <TextBox x:Name="sobrenomeText" FontSize="15" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox x:Name="sobrenomeText" FontSize="15" Grid.Row="2" Grid.Column="1" Margin="0,0,0,19" Grid.RowSpan="2" Text="{Binding Path=ContatosViewModel.ContatoSelecionado.Sobrenome}"></TextBox>
         <TextBlock FontSize="15" Grid.Row="3" Grid.Column="0">Data De Nascimento:</TextBlock>
         <TextBlock FontSize="15" Grid.Row="4" Grid.Column="0">Telefone:</TextBlock>
-        <TextBox x:Name="telefoneText" FontSize="15" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox x:Name="telefoneText" FontSize="15" Grid.Row="4" Grid.Column="1" Margin="0,0,0,19" Grid.RowSpan="2" Text="{Binding Path=ContatosViewModel.ContatoSelecionado.Telefone}"></TextBox>
         <TextBlock FontSize="15" Grid.Row="5" Grid.Column="0">Compromissos:</TextBlock>
         <Button x:Name="SalvarContatoButton" Content="Salvar" Grid.Row="7" Grid.Column="0" Width="110" Height="20" Click="SalvarContatoButton_Click"/>
         <Button x:Name="CancelarContatoButton" Content="Cancelar" Grid.Row="7" Grid.Column="1" Width="110" Height="20" Click="CancelarContatoButton_Click"/>
