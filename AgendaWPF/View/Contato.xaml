@@ -42,7 +42,7 @@
                   "{Binding Path=ContatosViewModel.Contatos}"
                   DisplayMemberPath="Nome"
                   SelectedItem="{Binding Path=ContatosViewModel.ContatoSelecionado}"/>
-        <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
+        <DatePicker x:Name="nascDatePicker" Grid.Column="1"  Grid.Row="3"  SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
 
     </Grid>
 </Window>

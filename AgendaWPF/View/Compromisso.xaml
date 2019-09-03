@@ -40,8 +40,8 @@
                   "{Binding Path=CompromissoViewModel.Compromissos}"
                   DisplayMemberPath="Titulo"
                   SelectedItem="{Binding Path=CompromissoViewModel.CompromissoSelecionado}"/>
-        <DatePicker x:Name="InicioDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Inicio}"/>
-        <DatePicker x:Name="FimDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Fim}"/>
+        <DatePicker x:Name="InicioDatePicker" Grid.Column="1"  Grid.Row="3"  SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Inicio}"/>
+        <DatePicker x:Name="FimDatePicker" Grid.Column="1"  Grid.Row="4"  SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Fim}"/>
 
     </Grid>
 </Window>
