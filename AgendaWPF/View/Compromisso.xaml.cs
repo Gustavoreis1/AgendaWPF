@@ -19,14 +19,35 @@ namespace AgendaWPF.View
     /// </summary>
     public partial class Compromisso : Window
     {
+        public ViewModel.CompromissoViewModel CompromissoViewModel { get; set; }
         public Compromisso()
         {
             InitializeComponent();
+            this.CompromissoViewModel = new ViewModel.CompromissoViewModel();
+            this.DataContext = this;
         }
 
-        private void ContatoAdicionarButton_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void AdicionarCompromissoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.CompromissoViewModel.Adicionar();
+
+        }
+
+        private void RemoverCompromissoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.CompromissoViewModel.Remover();
+        }
+
+        private void SalvarCompromissoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.CompromissoViewModel.Salvar();
+            this.Close();
+        }
+
+        private void CancelarCompromissoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -7,18 +7,41 @@
         mc:Ignorable="d"
         Title="Compromisso" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="247*"/>
-            <RowDefinition Height="172*"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="ContatoAdicionarButton" Content="Adicionar Contato" Margin="10,10,10,217"/>
-        <Button Content="Remover Contato" Margin="10,35,10,192"/>
-        <TextBox Height="23" Margin="10,10,10,0" Grid.Row="1" TextWrapping="Wrap" Text="Nome: " VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="10,38,10,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <Button x:Name="AdicionarCompromissoButton" Content="Adicionar " Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" Click="AdicionarCompromissoButton_Click" />
+        <Button x:Name="RemoverCompromissoButton" Content="Remover " Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"  Click="RemoverCompromissoButton_Click" IsEnabled="{Binding Path=CompromissosViewModel.PodeRemover}"/>
+        <TextBlock FontSize="15" Grid.Row="1" Grid.Column="0">Titulo:</TextBlock>
+        <TextBox x:Name="nomeText" FontSize="15" Grid.Row="1" Grid.Column="1" Text="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Titulo}"></TextBox>
+        <TextBlock FontSize="15" Grid.Row="2" Grid.Column="0">Local:</TextBlock>
+        <TextBox x:Name="sobrenomeText" FontSize="15" Grid.Row="2" Grid.Column="1" Margin="0,0,0,19" Grid.RowSpan="2" Text="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Local}"></TextBox>
+        <TextBlock FontSize="15" Grid.Row="3" Grid.Column="0">Data De Inicio:</TextBlock>
+        <TextBlock FontSize="15" Grid.Row="4" Grid.Column="0">Data De Encerramento:</TextBlock>
+        <TextBlock FontSize="15" Grid.Row="5" Grid.Column="0">Participantes:</TextBlock>
+        <Button x:Name="SalvarCompromissoButton" Content="Salvar" Grid.Row="7" Grid.Column="0" Width="110" Height="20" Click="SalvarCompromissoButton_Click"/>
+        <Button x:Name="CancelarCompromissoButton" Content="Cancelar" Grid.Row="7" Grid.Column="1" Width="110" Height="20" Click="CancelarCompromissoButton_Click"/>
+        <ListView x:Name="ListViewContatos"
+                  HorizontalAlignment="Left" Margin="10,9,0,11" Width="376" 
+                  Grid.Column="1"
+                  ItemsSource=
+                  "{Binding Path=CompromissoViewModel.Compromissos}"
+                  DisplayMemberPath="Titulo"
+                  SelectedItem="{Binding Path=CompromissoViewModel.CompromissoSelecionado}"/>
+        <DatePicker x:Name="InicioDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Inicio}"/>
+        <DatePicker x:Name="FimDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Fim}"/>
 
     </Grid>
 </Window>

@@ -24,6 +24,7 @@ namespace AgendaWPF
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private void ContatosButton_Click(object sender, RoutedEventArgs e)
@@ -37,6 +38,11 @@ namespace AgendaWPF
         {
             Compromisso Cmp = new Compromisso();
             Cmp.Show();
+        }
+
+        private void FinalizarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
