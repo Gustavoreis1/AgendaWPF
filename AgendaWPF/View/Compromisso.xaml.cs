@@ -49,5 +49,10 @@ namespace AgendaWPF.View
         {
             this.Close();
         }
+        private void AdicionarContatoButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.CompromissoViewModel.AdicionarCont();
+        }
+
     }
 }

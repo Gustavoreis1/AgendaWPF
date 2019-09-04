@@ -42,7 +42,14 @@
                   "{Binding Path=ContatosViewModel.Contatos}"
                   DisplayMemberPath="Nome"
                   SelectedItem="{Binding Path=ContatosViewModel.ContatoSelecionado}"/>
-        <DatePicker x:Name="nascDatePicker" Grid.Column="1"  Grid.Row="3"  SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
+        <ListView x:Name="ListViewCompromissos"
+                  HorizontalAlignment="Left" Margin="10,11,0,-91" Width="376" 
+                  Grid.Column="1"
+                  ItemsSource=
+                  "{Binding Path=ContatosViewModel.CompromissoViewModel.Compromisso}"
+                  DisplayMemberPath="Titulo" 
+                  Grid.Row="8"/>
+        <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
 
     </Grid>
 </Window>

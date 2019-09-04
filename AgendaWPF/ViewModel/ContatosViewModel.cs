@@ -24,6 +24,7 @@ namespace AgendaWPF.ViewModel
 
         public Contato ContatoSelecionado { get; set; }
         private AgendaContext Context { get; set; }
+        public ObservableCollection<Compromisso> Compross;
         public ContatosViewModel()
         {
             Context = new AgendaContext();
@@ -32,6 +33,8 @@ namespace AgendaWPF.ViewModel
                 Context.Contatos.ToList());
             this.ContatoSelecionado = Context
                 .Contatos.FirstOrDefault();
+               
+            
         }
 
         public void Remover()

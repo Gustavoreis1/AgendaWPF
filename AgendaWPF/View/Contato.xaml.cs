@@ -22,10 +22,12 @@ namespace AgendaWPF.View
     {
 
         public ViewModel.ContatosViewModel ContatosViewModel { get; set; }
+        public ViewModel.CompromissoViewModel CompromissoViewModel { get; set; }
         public Contato()
         {
             InitializeComponent();
             this.ContatosViewModel = new ViewModel.ContatosViewModel();
+            this.CompromissoViewModel = new ViewModel.CompromissoViewModel();
             this.DataContext = this;
         }
 

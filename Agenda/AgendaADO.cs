@@ -31,6 +31,7 @@ namespace Agenda
 
         }
         public virtual DbSet<Contato> Contatos { get; set; }
+        public virtual DbSet<Compromisso> Compromissos { get; set; }
     }
 
     //public class MyEntity

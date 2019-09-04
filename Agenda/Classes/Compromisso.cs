@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -30,5 +31,6 @@ namespace Agenda.Classes
         public DateTime Fim { get; set; }
 
         public IList<Contato> Participantes { get; set; }
+
     }
 }

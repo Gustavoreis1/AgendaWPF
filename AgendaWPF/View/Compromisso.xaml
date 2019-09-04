@@ -33,6 +33,8 @@
         <TextBlock FontSize="15" Grid.Row="5" Grid.Column="0">Participantes:</TextBlock>
         <Button x:Name="SalvarCompromissoButton" Content="Salvar" Grid.Row="7" Grid.Column="0" Width="110" Height="20" Click="SalvarCompromissoButton_Click"/>
         <Button x:Name="CancelarCompromissoButton" Content="Cancelar" Grid.Row="7" Grid.Column="1" Width="110" Height="20" Click="CancelarCompromissoButton_Click"/>
+        <Button x:Name="AdicionarContatoButton" Content="Adicionar Contato" Grid.Row="8" Grid.Column="0" Width="110" Height="20" Click="AdicionarContatoButton_Click"/>
+
         <ListView x:Name="ListViewContatos"
                   HorizontalAlignment="Left" Margin="10,9,0,11" Width="376" 
                   Grid.Column="1"
@@ -40,6 +42,13 @@
                   "{Binding Path=CompromissoViewModel.Compromissos}"
                   DisplayMemberPath="Titulo"
                   SelectedItem="{Binding Path=CompromissoViewModel.CompromissoSelecionado}"/>
+        <ListView x:Name="ListViewCompromissos"
+                  HorizontalAlignment="Left" Margin="10,11,0,-91" Width="376" 
+                  Grid.Column="1"
+                  ItemsSource=
+                  "{Binding Path=CompromissoViewModel.Contatos}"
+                  DisplayMemberPath="Nome"
+                  SelectedItem="{Binding Path=CompromissoViewModel.ContatoSelecionado}" Grid.Row="8"/>
         <DatePicker x:Name="InicioDatePicker" Grid.Column="1"  Grid.Row="3"  SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Inicio}"/>
         <DatePicker x:Name="FimDatePicker" Grid.Column="1"  Grid.Row="4"  SelectedDate="{Binding Path=CompromissoViewModel.CompromissoSelecionado.Fim}"/>
 
