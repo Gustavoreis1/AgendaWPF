@@ -46,7 +46,7 @@
                   HorizontalAlignment="Left" Margin="10,11,0,-91" Width="376" 
                   Grid.Column="1"
                   ItemsSource=
-                  "{Binding Path=ContatosViewModel.CompromissoViewModel.Compromisso}"
+                  "{Binding Path=ContatosViewModel.ContatoSelecionado.Compromissos}"
                   DisplayMemberPath="Titulo" 
                   Grid.Row="8"/>
         <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,10 +28,11 @@ namespace AgendaWPF.ViewModel
         public ObservableCollection<Compromisso> Compross;
         public ContatosViewModel()
         {
+            
             Context = new AgendaContext();
             this.Contatos =
                 new ObservableCollection<Contato>(
-                Context.Contatos.ToList());
+                Context.Contatos.Include("Compromissos").ToList());
             this.ContatoSelecionado = Context
                 .Contatos.FirstOrDefault();
                
