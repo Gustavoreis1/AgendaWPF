@@ -32,7 +32,7 @@ namespace AgendaWPF.ViewModel
             IList<Contato> parts = new List<Contato>();
             this.Compromissos =
                 new ObservableCollection<Compromisso>(
-                Context.Compromissos.ToList());
+                Context.Compromissos.Include("Participantes").ToList());
             this.CompromissoSelecionado = Context
                 .Compromissos.FirstOrDefault();
             this.CompromissoSelecionado.Participantes = parts;
@@ -67,6 +67,7 @@ namespace AgendaWPF.ViewModel
 
         public void AdicionarCont()
         {
+
             this.CompromissoSelecionado.Participantes.Add(this.ContatoSelecionado);
         }
     }
