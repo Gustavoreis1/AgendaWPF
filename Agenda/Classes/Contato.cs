@@ -24,7 +24,9 @@ namespace Agenda.Classes
         [MinLength(2, ErrorMessage = "O campo Nome recebe no Minimo 2 caracteres")]
         [Display(Name = "Sobrenome")]
         public String Sobrenome { get; set; }
-        
+
+        [DataType(DataType.Date)]
+        [System.ComponentModel.Bindable(true)]
         public DateTime Nasc { get; set; }
 
         [Required(ErrorMessage = "O campo Telefone é requerido!!")]

@@ -23,8 +23,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="AdicionarContatoButton" Content="Adicionar Contato" Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" Click="AdicionarContatoButton_Click" />
-        <Button x:Name="RemoverContatoButton" Content="Remover Contato" Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"  Click="RemoverContatoButton_Click" IsEnabled="{Binding Path=ContatosViewModel.PodeRemover}"/>
+        <Button x:Name="AdicionarContatoButton" Content="Adicionar" Grid.Row="0" Grid.Column="0" Width="110" Height="20" Margin="143,24,143,57" Click="AdicionarContatoButton_Click" />
+        <Button x:Name="RemoverContatoButton" Content="Remover" Grid.Row="0" Grid.Column="0" Margin="143,66,143,15" Width="110" Height="20"  Click="RemoverContatoButton_Click" IsEnabled="{Binding Path=ContatosViewModel.PodeRemover}"/>
         <TextBlock FontSize="15" Grid.Row="1" Grid.Column="0">Nome:</TextBlock>
         <TextBox x:Name="nomeText" FontSize="15" Grid.Row="1" Grid.Column="1" Text="{Binding Path=ContatosViewModel.ContatoSelecionado.Nome}"></TextBox>
         <TextBlock FontSize="15" Grid.Row="2" Grid.Column="0">Sobrenome:</TextBlock>
@@ -36,20 +36,21 @@
         <Button x:Name="SalvarContatoButton" Content="Salvar" Grid.Row="7" Grid.Column="0" Width="110" Height="20" Click="SalvarContatoButton_Click"/>
         <Button x:Name="CancelarContatoButton" Content="Cancelar" Grid.Row="7" Grid.Column="1" Width="110" Height="20" Click="CancelarContatoButton_Click"/>
         <ListView x:Name="ListViewContatos"
-                  HorizontalAlignment="Left" Margin="10,9,0,11" Width="376" 
+                  HorizontalAlignment="Left"  Width="400" 
                   Grid.Column="1"
+                  Grid.Row="0"
                   ItemsSource=
                   "{Binding Path=ContatosViewModel.Contatos}"
                   DisplayMemberPath="Nome"
                   SelectedItem="{Binding Path=ContatosViewModel.ContatoSelecionado}"/>
         <ListView x:Name="ListViewCompromissos"
-                  HorizontalAlignment="Left" Margin="10,11,0,-91" Width="376" 
+                  HorizontalAlignment="Left"  Width="400" 
                   Grid.Column="1"
                   ItemsSource=
                   "{Binding Path=ContatosViewModel.ContatoSelecionado.Compromissos}"
                   DisplayMemberPath="Titulo" 
-                  Grid.Row="8"/>
-        <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="391" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}"/>
+                  Grid.Row="5"/>
+        <DatePicker x:Name="nascDatePicker" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="3" VerticalAlignment="Top" Width="400" SelectedDate="{Binding Path=ContatosViewModel.ContatoSelecionado.Nasc}" DisplayDateEnd="04/09/2019"/>
 
     </Grid>
 </Window>
